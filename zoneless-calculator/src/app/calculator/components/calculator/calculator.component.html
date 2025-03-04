@@ -10,7 +10,7 @@
 </div>
 <div class="w-full bg-gradient-to-b from-indigo-400 to-indigo-500">
   <div class="flex w-full">
-    <calculator-btn> C </calculator-btn>
+    <calculator-btn (onClick)="handleClick($event)"> C </calculator-btn>
     <calculator-btn> +/- </calculator-btn>
     <calculator-btn> % </calculator-btn>
     <calculator-btn isCommand> ÷ </calculator-btn>
