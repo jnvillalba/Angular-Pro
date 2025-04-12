@@ -8,6 +8,7 @@ import { Meta, Title } from '@angular/platform-browser';
 @Component({
   selector: 'pricing-page',
   imports: [],
+  standalone: true,
   templateUrl: './pricing-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

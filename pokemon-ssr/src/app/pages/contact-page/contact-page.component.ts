@@ -3,6 +3,8 @@ import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'contact-page',
+
+  standalone: true,
   imports: [],
   templateUrl: './contact-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
