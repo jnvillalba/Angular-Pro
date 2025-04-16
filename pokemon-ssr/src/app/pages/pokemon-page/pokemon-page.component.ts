@@ -33,27 +33,27 @@ export default class PokemonPageComponent implements OnInit {
 
     this.pokemonsService
       .loadPokemon(id)
-      .pipe(
-        tap(({ name, id }) => {
-          const pageTitle = `#${id} - ${name}`;
-          const pageDescription = `Página del Pokémon ${name}`;
-          this.title.setTitle(pageTitle);
-
-          this.meta.updateTag({
-            name: 'description',
-            content: pageDescription,
-          });
-          this.meta.updateTag({ name: 'og:title', content: pageTitle });
-          this.meta.updateTag({
-            name: 'og:description',
-            content: pageDescription,
-          });
-          this.meta.updateTag({
-            name: 'og:image',
-            content: `${POKEMON_SPRITE_BASE_URL}${id}.png`,
-          });
-        })
-      )
+      .pipe(tap((pokemon) => this.updateMetaTags(pokemon)))
       .subscribe(this.pokemon.set);
+  }
+
+  private updateMetaTags(pokemon: Pokemon): void {
+    const pageTitle = `#${pokemon.id} - ${pokemon.name}`;
+    const pageDescription = `Página del Pokémon ${pokemon.name}`;
+
+    this.title.setTitle(pageTitle);
+    const tags = [
+      { name: 'description', content: pageDescription },
+      { name: 'og:title', content: pageTitle },
+      { name: 'og:description', content: pageDescription },
+      {
+        name: 'og:image',
+        content: `${POKEMON_SPRITE_BASE_URL}${pokemon.id}.png`,
+      },
+    ];
+
+    tags.forEach((tag) =>
+      this.meta.updateTag({ name: tag.name, content: tag.content })
+    );
   }
 }
