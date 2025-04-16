@@ -18,12 +18,6 @@ export default class PricingPageComponent {
   private platform = inject(PLATFORM_ID);
 
   ngOnInit(): void {
-    // if (isPlatformBrowser(this.platform)) {
-    //   document.title = 'Pricing Page';
-    // }
-
-    // console.log({ hola: 'mundo' });
-
     this.title.setTitle('Pricing Page');
     this.meta.updateTag({
       name: 'description',

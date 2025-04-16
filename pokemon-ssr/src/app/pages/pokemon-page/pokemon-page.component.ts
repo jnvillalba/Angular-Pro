@@ -9,6 +9,7 @@ import {
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { tap } from 'rxjs';
+import { POKEMON_SPRITE_BASE_URL } from '../../app.config';
 import { Pokemon } from '../../pokemons/interfaces';
 import { PokemonsService } from '../../pokemons/services/pokemons.service';
 
@@ -49,7 +50,7 @@ export default class PokemonPageComponent implements OnInit {
           });
           this.meta.updateTag({
             name: 'og:image',
-            content: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`,
+            content: `${POKEMON_SPRITE_BASE_URL}${id}.png`,
           });
         })
       )

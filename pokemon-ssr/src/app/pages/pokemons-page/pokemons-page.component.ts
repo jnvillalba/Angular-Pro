@@ -42,15 +42,11 @@ export default class PokemonsPageComponent implements OnInit {
 
   ngOnInit(): void {
     // this.route.queryParamMap.subscribe(console.log);
-    console.log(this.currentPage());
 
     this.loadPokemons();
     // title
     // Meta-tags
     // Stable
-    // setTimeout(() => {
-    //   this.isLoading.set(false);
-    // }, 5000);
   }
 
   public loadPokemons(page = 0) {

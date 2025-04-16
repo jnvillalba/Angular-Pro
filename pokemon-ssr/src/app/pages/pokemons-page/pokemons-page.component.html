@@ -1,24 +1,22 @@
 <h1 class="text-3xl">Listado de Pokémons</h1>
 <h2 class="text-xl">Página actual: {{ currentPage() }}</h2>
-
 <hr class="my-2" />
-
 @if( pokemons().length !== 0 ) {
 <pokemon-list [pokemons]="pokemons()" />
+} @else {<pokemon-list-skeleton />}
 
-} @else {
+<div class="flex justify-between items-center mt-4">
+  <button
+    (click)="loadPokemons(-1)"
+    class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+  >
+    Anteriores
+  </button>
 
-<pokemon-list-skeleton />
-}
-
-<!-- TODO: Buttons Cargar siguiente y anteriores -->
-
-<div class="flex justify-between">
-  <button (click)="loadPokemons(-1)" class="mt-2">Anteriores</button>
-
-  <button (click)="loadPokemons(+1)" class="mt-2">Siguientes</button>
-
-  <!-- <button (click)="currentName.set('Otro Nombre')" class="mt-2">
-    {{ currentName() }}
-  </button> -->
+  <button
+    (click)="loadPokemons(+1)"
+    class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+  >
+    Siguientes
+  </button>
 </div>
