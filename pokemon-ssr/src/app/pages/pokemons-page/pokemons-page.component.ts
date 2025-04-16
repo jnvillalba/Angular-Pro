@@ -11,7 +11,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { map, tap } from 'rxjs';
 
 import { Title } from '@angular/platform-browser';
-import { PokemonListComponent } from '../../pokemons/components/pokemon-list/pokemon-list.component';
+import { PokemonListComponent } from '../../components/pokemon-list/pokemon-list.component';
 import { SimplePokemon } from '../../pokemons/interfaces';
 import { PokemonsService } from '../../pokemons/services/pokemons.service';
 import { PokemonListSkeletonComponent } from './ui/pokemon-list-skeleton/pokemon-list-skeleton.component';
