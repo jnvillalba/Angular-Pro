@@ -5,7 +5,7 @@ import {
   inject,
   signal,
 } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map, tap } from 'rxjs';
@@ -17,7 +17,7 @@ import { SimplePokemon } from '../../pokemons/interfaces';
 import { PokemonsService } from '../../pokemons/services/pokemons.service';
 
 @Component({
-  selector: 'app-pokemons-page',
+  selector: 'pokemons-page',
   imports: [PokemonListComponent, PokemonListSkeletonComponent, RouterLink],
   templateUrl: './pokemons-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -27,7 +27,7 @@ export default class PokemonsPageComponent {
   public pokemons = signal<SimplePokemon[]>([]);
 
   private route = inject(ActivatedRoute);
-  private router = inject(Router);
+
   private title = inject(Title);
 
   public currentPage = toSignal<number>(
@@ -42,21 +42,16 @@ export default class PokemonsPageComponent {
     () => {
       this.loadPokemons(this.currentPage());
     },
-    { allowSignalWrites: true }
+    {
+      allowSignalWrites: true,
+    }
   );
 
   public loadPokemons(page = 0) {
-    const pageToLoad = this.currentPage()! + page;
-
     this.pokemonsService
-      .loadPage(pageToLoad)
-      .pipe(
-        tap(() =>
-          this.router.navigate([], { queryParams: { page: pageToLoad } })
-        ),
-        tap(() => this.title.setTitle(`Pokémons SSR - Page ${pageToLoad}`))
-      )
-      .subscribe((pokemons: SimplePokemon[]) => {
+      .loadPage(page)
+      .pipe(tap(() => this.title.setTitle(`Pokémons SSR - Page ${page}`)))
+      .subscribe((pokemons) => {
         this.pokemons.set(pokemons);
       });
   }
