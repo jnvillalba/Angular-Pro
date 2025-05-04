@@ -7,14 +7,15 @@
 
 <div class="flex justify-between items-center mt-4">
   <button
-    (click)="loadPokemons(-1)"
+    [disabled]="currentPage() === 1"
+    [routerLink]="['/pokemons/page', currentPage()! - 1]"
     class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
   >
     Anteriores
   </button>
 
   <button
-    (click)="loadPokemons(+1)"
+    [routerLink]="['/pokemons/page', currentPage()! + 1]"
     class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
   >
     Siguientes
