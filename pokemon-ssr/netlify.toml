@@ -1,9 +1,9 @@
 [build]
-  command = "npm run build && npm run serve:ssr:pokemon-ssr"
+  command = "npm run build"
   publish = "dist/pokemon-ssr/browser"
   functions = "dist/pokemon-ssr/server"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions/server"
   status = 200
