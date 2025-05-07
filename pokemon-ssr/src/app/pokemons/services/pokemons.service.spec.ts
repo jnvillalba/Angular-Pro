@@ -1,12 +1,12 @@
-import { TestBed } from '@angular/core/testing';
-import { PokemonsService } from './pokemons.service';
 import { provideHttpClient } from '@angular/common/http';
 import {
   HttpTestingController,
   provideHttpClientTesting,
 } from '@angular/common/http/testing';
-import { PokeAPIResponse, SimplePokemon } from '../interfaces';
+import { TestBed } from '@angular/core/testing';
 import { catchError } from 'rxjs';
+import { PokeAPIResponse, SimplePokemon } from '../interfaces';
+import { PokemonsService } from './pokemons.service';
 
 const mockPokeApiResponse: PokeAPIResponse = {
   count: 1302,
@@ -32,7 +32,6 @@ const expectedPokemons: SimplePokemon[] = [
 const mockPokemon = {
   id: 1,
   name: 'bulbasaur',
-  //TODO: Otros campos de la interfaz Pokemon según sea necesario
 };
 
 describe('PokemonsService', () => {
@@ -115,7 +114,6 @@ describe('PokemonsService', () => {
     req.flush(mockPokemon);
   });
 
-  // Disparar errores
   it('should catch error if pokémon not found', () => {
     const pokemonName = 'yo-no-existo';
 
@@ -123,7 +121,6 @@ describe('PokemonsService', () => {
       .loadPokemon(pokemonName)
       .pipe(
         catchError((err) => {
-          // console.log(err);
           expect(err.message).toContain('Pokémon not found');
           return [];
         })

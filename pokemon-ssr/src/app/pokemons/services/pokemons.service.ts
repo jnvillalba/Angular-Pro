@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { catchError, map, Observable, tap, throwError } from 'rxjs';
+import { catchError, map, Observable, throwError } from 'rxjs';
 import { PokeAPIResponse, Pokemon, SimplePokemon } from '../interfaces';
 
 @Injectable({
@@ -10,8 +10,6 @@ export class PokemonsService {
   private http = inject(HttpClient);
 
   public loadPage(page: number): Observable<SimplePokemon[]> {
-    // 1 = 0
-
     if (page !== 0) {
       --page;
     }
@@ -33,8 +31,6 @@ export class PokemonsService {
 
           return simplePokemons;
         })
-
-        // tap(console.log)
       );
   }
 

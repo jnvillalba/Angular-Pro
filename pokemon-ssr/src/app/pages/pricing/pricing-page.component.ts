@@ -1,4 +1,3 @@
-import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -6,7 +5,7 @@ import {
   OnInit,
   PLATFORM_ID,
 } from '@angular/core';
-import { Title, Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'page-pricing',
@@ -21,12 +20,6 @@ export default class PricingPageComponent implements OnInit {
   private platform = inject(PLATFORM_ID);
 
   ngOnInit(): void {
-    // if (isPlatformBrowser(this.platform)) {
-    //   document.title = 'Pricing Page';
-    // }
-
-    // console.log({ hola: 'mundo' });
-
     this.title.setTitle('Pricing Page');
     this.meta.updateTag({
       name: 'description',

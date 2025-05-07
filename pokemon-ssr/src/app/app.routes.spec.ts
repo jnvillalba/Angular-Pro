@@ -1,7 +1,7 @@
-import { TestBed } from '@angular/core/testing';
-import { routes } from './app.routes';
-import { provideRouter, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { TestBed } from '@angular/core/testing';
+import { provideRouter, Router } from '@angular/router';
+import { routes } from './app.routes';
 
 describe('App Routes', () => {
   let router: Router;
@@ -30,8 +30,6 @@ describe('App Routes', () => {
 
   it('should navigate to "pokemons/page/1" redirects to "/pokemons/page/1" ', async () => {
     await router.navigate(['unknown-page']);
-
-    // console.log(location.path());
 
     expect(location.path()).toBe('/about');
   });
