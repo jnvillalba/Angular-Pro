@@ -1,11 +1,11 @@
 export interface PokeAPIResponse {
   count: number;
-  next: string | null;
-  previous: string | null;
+  next: string;
+  previous: string;
   results: Result[];
 }
 
 export interface Result {
-  url: string;
   name: string;
+  url: string;
 }

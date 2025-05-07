@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { PokemonCardComponent } from './pokemon-card.component';
 import { provideRouter } from '@angular/router';
 import { SimplePokemon } from '../../interfaces';
-import { PokemonCardComponent } from './pokemon-card.component';
 
 const mockPokemon: SimplePokemon = {
   id: '1',

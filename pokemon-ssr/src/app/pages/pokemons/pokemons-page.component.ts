@@ -10,14 +10,15 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map, tap } from 'rxjs';
 
-import { Title } from '@angular/platform-browser';
-import { PokemonListSkeletonComponent } from '../../pokemons/components/pokemon-list-skeleton/pokemon-list-skeleton.component';
 import { PokemonListComponent } from '../../pokemons/components/pokemon-list/pokemon-list.component';
-import { SimplePokemon } from '../../pokemons/interfaces';
+import { PokemonListSkeletonComponent } from './ui/pokemon-list-skeleton/pokemon-list-skeleton.component';
 import { PokemonsService } from '../../pokemons/services/pokemons.service';
+import { SimplePokemon } from '../../pokemons/interfaces';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'pokemons-page',
+  standalone: true,
   imports: [PokemonListComponent, PokemonListSkeletonComponent, RouterLink],
   templateUrl: './pokemons-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,13 +1,19 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  OnInit,
+} from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
-  selector: 'contact-page',
+  selector: 'page-contact',
+  standalone: true,
   imports: [],
   templateUrl: './contact-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class ContactPageComponent {
+export default class ContactPageComponent implements OnInit {
   private title = inject(Title);
   private meta = inject(Meta);
 
@@ -20,7 +26,7 @@ export default class ContactPageComponent {
     this.meta.updateTag({ name: 'og:title', content: 'Contact Page' });
     this.meta.updateTag({
       name: 'keywords',
-      content: 'Contact,Angular,PRO',
+      content: 'Hola,Mundo,Fernando,Herrera,Curso,Angular,PRO',
     });
   }
 }
