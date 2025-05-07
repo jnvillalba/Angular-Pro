@@ -9,7 +9,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavBarComponent {
+export class NavbarComponent {
   navItems = [
     { path: '/pokemons/page/1', label: 'Pokémons' },
     { path: '/about', label: 'About' },
