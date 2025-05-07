@@ -1,0 +1,32 @@
+<div class="container mx-auto">
+  <h1 class="text-4xl font-bold text-center mb-2">Listado de Pokémons</h1>
+
+  <hr class="my-4 border-gray-300" />
+
+  @if( pokemons().length !== 0 ) {
+  <pokemon-list [pokemons]="pokemons()" />
+
+  } @else {
+
+  <pokemon-list-skeleton />
+  }
+
+  <div class="flex justify-between items-center my-6">
+    <button
+      [disabled]="currentPage() === 1"
+      [routerLink]="['/pokemons/page', currentPage()! - 1]"
+      class="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed"
+    >
+      ⬅️ Anteriores
+    </button>
+    <div class="text-lg text-gray-600 text-center">
+      Página actual: <span class="font-semibold">{{ currentPage() }}</span>
+    </div>
+    <button
+      [routerLink]="['/pokemons/page', currentPage()! + 1]"
+      class="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600"
+    >
+      Siguientes ➡️
+    </button>
+  </div>
+</div>

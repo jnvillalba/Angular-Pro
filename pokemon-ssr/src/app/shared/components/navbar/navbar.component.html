@@ -1,0 +1,12 @@
+<nav
+  class="text-white gap-4 top-0 absolute z-50 w-full flex justify-end px-2 py-3 bg-slate-900 shadow-md"
+>
+  <a
+    *ngFor="let item of navItems"
+    class="hover:underline"
+    [routerLink]="item.path"
+    routerLinkActive="text-blue-500 underline"
+  >
+    {{ item.label }}
+  </a>
+</nav>
