@@ -2,10 +2,12 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
+  effect,
   input,
+  signal,
 } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { SimplePokemon } from '../../interfaces';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'pokemon-card',
@@ -23,4 +25,8 @@ export class PokemonCardComponent {
         this.pokemon().id
       }.png`
   );
+
+  // logEffect = effect(() => {
+  //   console.log('PokemonCard: ', this.pokemon());
+  // });
 }
