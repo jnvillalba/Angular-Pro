@@ -7,4 +7,5 @@ export enum ErrorCode {
   //   UNEXPECTED_ERROR = 'UNEXPECTED_ERROR',
   //   VALIDATION_ERROR = 'VALIDATION_ERROR',
   LABELS_LOAD_ERROR = "Can't load labels",
+  ISSUES_LOAD_ERROR = "Can't load issues",
 }

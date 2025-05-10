@@ -31,12 +31,13 @@
 
   <!-- Labels -->
   <div>
-    <!-- @if( labelsQuery.isLoading() ) {
+    @if( labelsQuery.isLoading() ) {
     <p>Estamos cargando</p>
     } @else {
-    <issues-labels-selector [labels]="labelsQuery.data() ?? []" />
-    } -->
+    <labels-selector [labels]="labelsQuery.data() ?? []" />
 
-    <!-- Todo: Label Selector -->
+    }
+
+    <!-- Todo: Label Selector-->
   </div>
 </section>
