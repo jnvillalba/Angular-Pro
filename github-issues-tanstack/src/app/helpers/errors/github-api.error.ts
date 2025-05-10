@@ -1,11 +1,6 @@
 export enum ErrorCode {
-  //   NETWORK_ERROR = 'NETWORK_ERROR',
-  //   AUTHENTICATION_ERROR = 'AUTHENTICATION_ERROR',
-  //   RATE_LIMIT_ERROR = 'RATE_LIMIT_ERROR',
-  //   NOT_FOUND_ERROR = 'NOT_FOUND_ERROR',
-  //   SERVER_ERROR = 'SERVER_ERROR',
-  //   UNEXPECTED_ERROR = 'UNEXPECTED_ERROR',
-  //   VALIDATION_ERROR = 'VALIDATION_ERROR',
   LABELS_LOAD_ERROR = "Can't load labels",
   ISSUES_LOAD_ERROR = "Can't load issues",
+  ISSUE_LOAD_ERROR = "Can't load issue by number",
+  ISSUE_COMMENTS_LOAD_ERROR = "Can't load issue comments",
 }

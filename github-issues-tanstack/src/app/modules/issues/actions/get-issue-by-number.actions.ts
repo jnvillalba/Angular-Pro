@@ -6,23 +6,25 @@ import { GitHubIssue } from '../interfaces/github-issue.interface';
 const BASE_URL = environment.baseUrl;
 const GITHUB_TOKEN = environment.gitHubToken;
 
-export const getIssues = async (): Promise<GitHubIssue[]> => {
+export const getIssueByNumber = async (
+  issueNumber: string
+): Promise<GitHubIssue> => {
   await sleep(1500);
 
   try {
-    const resp = await fetch(`${BASE_URL}/issues`, {
+    const resp = await fetch(`${BASE_URL}/issues/${issueNumber}`, {
       headers: {
         Authorization: `Bearer ${GITHUB_TOKEN}`,
       },
     });
 
-    if (!resp.ok) throw ErrorCode.ISSUES_LOAD_ERROR;
+    if (!resp.ok) throw ErrorCode.ISSUE_LOAD_ERROR;
 
-    const issues: GitHubIssue[] = await resp.json();
-    console.log({ issues });
+    const issue: GitHubIssue = await resp.json();
+    console.log({ issue });
 
-    return issues;
+    return issue;
   } catch (error) {
-    throw ErrorCode.ISSUES_LOAD_ERROR;
+    throw ErrorCode.ISSUE_LOAD_ERROR;
   }
 };

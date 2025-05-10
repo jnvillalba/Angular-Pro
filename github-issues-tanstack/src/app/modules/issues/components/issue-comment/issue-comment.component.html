@@ -1,0 +1,25 @@
+<div class="w-full transition-all duration-300 hover:scale-[1.01]">
+  <div
+    class="flex items-center justify-between bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-3"
+  >
+    <div class="flex items-center gap-3">
+      <img
+        [src]="issue().user.avatar_url"
+        alt="User avatar"
+        class="w-10 h-10 rounded-full ring-2 ring-white/70 shadow-md"
+      />
+      <div>
+        <span class="font-medium text-base">{{ issue().user.login }}</span>
+        <div class="text-xs opacity-80">commented on this issue</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-4 bg-gradient-to-b from-slate-800 to-slate-900 text-gray-100">
+    <div
+      class="prose prose-invert max-w-none prose-pre:bg-slate-700 prose-pre:border prose-pre:border-slate-600"
+    >
+      <markdown>{{ issue().body }}</markdown>
+    </div>
+  </div>
+</div>
