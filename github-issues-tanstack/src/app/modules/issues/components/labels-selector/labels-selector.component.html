@@ -8,6 +8,8 @@
     }"
     role="checkbox"
     [attr.title]="label.name"
+    (click)="onToggleLabel(label.name)"
+    [class.selected-label]="isSelected(label.name)"
   >
     {{ label.name }}
   </div>
