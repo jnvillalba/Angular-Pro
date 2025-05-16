@@ -1,0 +1,55 @@
+<h1>GitHub Issues</h1>
+<dir class="my-5 border-b-2 border-blue-600"></dir>
+
+<section class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+  <!-- Botones para controlar el Estado (State) -->
+  <div class="flex flex-col col-span-3">
+    <div class="flex gap-2">
+      <button
+        [class.active]="selectedState === 'all'"
+        class="btn"
+        (click)="onChangeState('all')"
+      >
+        All
+      </button>
+      <button
+        [class.active]="selectedState === 'open'"
+        class="btn"
+        (click)="onChangeState('open')"
+      >
+        Open
+      </button>
+      <button
+        [class.active]="selectedState === 'closed'"
+        class="btn"
+        (click)="onChangeState('closed')"
+      >
+        Closed
+      </button>
+    </div>
+  </div>
+
+  <!-- Listado -->
+  <div class="mt-4 flex flex-col col-span-2">
+    <!-- Todo: Listado de issues -->
+    @for (issue of issuesQuery.data(); track issue.id) {
+
+    <issue-item [issue]="issue" />
+
+    } @empty { @if( issuesQuery.isLoading() ) {
+    <loader />
+    } @else {
+    <p>No hay issues que mostrar</p>
+    } }
+  </div>
+
+  <!-- Labels -->
+  <div>
+    @if( labelsQuery.isLoading() ) {
+    <loader />
+    } @else {
+    <labels-selector [labels]="labelsQuery.data() ?? []" />
+
+    }
+  </div>
+</section>

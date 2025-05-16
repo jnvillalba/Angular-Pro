@@ -1,0 +1,17 @@
+<div class="flex flex-wrap justify-center items-center gap-2 p-2">
+  @for (label of labels(); track label.id) {
+  <div
+    class="flex items-center rounded-full py-1 px-3 text-sm transition-all duration-200 cursor-pointer select-none"
+    [ngStyle]="{
+      'background-color': '#' + label.color + '20',
+      border: '1px solid #' + label.color
+    }"
+    role="checkbox"
+    [attr.title]="label.name"
+    (click)="onToggleLabel(label.name)"
+    [class.selected-label]="isSelected(label.name)"
+  >
+    {{ label.name }}
+  </div>
+  }
+</div>
