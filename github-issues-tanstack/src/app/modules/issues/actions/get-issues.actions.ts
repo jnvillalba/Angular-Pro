@@ -1,4 +1,3 @@
-import { sleep } from '@helpers/sleep';
 import { environment } from 'src/environments/environment.development';
 import { ErrorCode } from '../../../helpers/errors/github-api.error';
 import { GitHubIssue, State } from '../interfaces/github-issue.interface';
@@ -10,7 +9,7 @@ export const getIssues = async (
   state: State = State.All,
   selectedLabels: string[]
 ): Promise<GitHubIssue[]> => {
-  await sleep(1500);
+  //await sleep(1500);
 
   const params = new URLSearchParams();
   params.append('state', state);
