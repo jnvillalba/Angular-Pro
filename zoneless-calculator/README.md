@@ -4,7 +4,7 @@ ZonelessCalculator es una calculadora web hecha con Angular que incorpora desde 
 
 ## 🚀 Demo
 
-**[ZonelessCalculator - Demo](https://zoneless-calculator.netlify.app/calculator)**
+**[ZonelessCalculator - Demo](https://zoneless-calculator.netlify.app/)**
 
 ## 🧰 Tecnologías y conceptos aplicados
 

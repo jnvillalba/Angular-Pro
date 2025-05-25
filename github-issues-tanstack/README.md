@@ -1,27 +1,37 @@
-# GithubIssues
+# 🐙 GithubIssues + TanStack Query
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+GithubIssues es una aplicación web desarrollada en Angular que utiliza **TanStack Query** para gestionar datos asíncronos de la API de GitHub, mejorando la experiencia de usuario con caché, revalidaciones automáticas y manejo eficiente de estados de carga.
 
-## Development server
+## 🚀 Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🧰 Tecnologías y conceptos aplicados
 
-## Code scaffolding
+⚡ **TanStack Query para Angular**  
+Gestión avanzada de datos asíncronos, promesas en caché, revalidaciones, control de reconexiones y sincronización automática.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+🔑 **Query Keys**  
+Identificadores únicos para controlar el almacenamiento y actualización de los datos en caché.
 
-## Build
+🔄 **Queries y Mutations**  
+Obtención y manipulación de datos remotos de forma reactiva y eficiente.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+🟢 **Habilitar/Deshabilitar Queries**  
+Control dinámico sobre cuándo ejecutar o pausar peticiones según el estado de la aplicación.
 
-## Running unit tests
+🧩 **Manejo de Queries en Servicios**  
+Centralización de la lógica de datos y peticiones HTTP en servicios reutilizables.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+⚙️ **Acciones y GitHub API**  
+Consumo de la API de GitHub para obtener issues, comentarios y etiquetas, aplicando patrones modernos de Angular.
 
-## Running end-to-end tests
+🗃️ **Caché Inteligente**  
+Almacenamiento temporal de datos para mejorar el rendimiento y la experiencia de usuario.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+🔹 **Angular**  
+Framework principal para construir la interfaz y lógica de la aplicación.
 
-## Further help
+💅 **Tailwind CSS**  
+Framework de estilos para construir interfaces modernas, limpias y responsivas.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+✅ **Testing**  
+Pruebas unitarias para garantizar la calidad y el comportamiento esperado del código.
