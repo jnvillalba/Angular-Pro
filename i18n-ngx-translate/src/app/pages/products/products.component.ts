@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { LanguageSelectorComponent } from '../../components/language-selector/language-selector.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { LanguageSelectorComponent } from '../../components/language-selector/language-selector.component';
 
 @Component({
   selector: 'app-products',
@@ -17,5 +17,5 @@ import { TranslateModule } from '@ngx-translate/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class ProductsComponent {
-  fullName = signal('Fernando Herrera');
+  fullName = signal('Joe Doe');
 }
