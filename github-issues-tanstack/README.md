@@ -2,8 +2,6 @@
 
 GithubIssues es una aplicación web desarrollada en Angular que utiliza **TanStack Query** para gestionar datos asíncronos de la API de GitHub, mejorando la experiencia de usuario con caché, revalidaciones automáticas y manejo eficiente de estados de carga.
 
-## 🚀 Demo
-
 ## 🧰 Tecnologías y conceptos aplicados
 
 ⚡ **TanStack Query para Angular**  
