@@ -1,6 +1,6 @@
 # 🔢 ZonelessCalculator
 
-ZonelessCalculator es una calculadora web hecha con Angular que incorpora desde conceptos tanto en versiones vieja como modernas de Angular, patrones de arquitectura, bueans practicas y tecnologías de las ultimas versiones de angular.
+ZonelessCalculator es una calculadora web hecha con Angular que incorpora desde conceptos tanto de versiones viejas como modernas de Angular, patrones de arquitectura, bueans practicas y tecnologías de las ultimas versiones de angular.
 
 ## 🧰 Tecnologías y conceptos aplicados
 
