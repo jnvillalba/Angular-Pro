@@ -1,27 +1,53 @@
-# PokemonSsr
+# 🌐 PokemonSSR
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+PokemonSSR es una aplicación web que transforma una SPA tradicional en una solución optimizada para SEO y despliegues modernos, aprovechando al máximo el **Server Side Rendering (SSR)** y el **Static Site Generation (SSG)**.
 
-## Development server
+## 🚀 Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**[PokemonSSR - Demo](https://pokemon-ssr.netlify.app/pokemons/page/1)**
 
-## Code scaffolding
+## 🧰 Tecnologías y conceptos aplicados
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+🌐 **Server Side Rendering (SSR)**  
+Renderizado de páginas de lado del servidor para mejorar el SEO y la velocidad de carga inicial.
 
-## Build
+📄 **Static Site Generation (SSG)**  
+Generación de páginas estáticas en tiempo de build usando prerendering.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+🔀 **SPA → SSR**  
+Transformación de una Single Page Application a una aplicación renderizada en el servidor.
 
-## Running unit tests
+🧠 **Ejecución selectiva de código (Server/Client)**  
+Capacidad de ejecutar lógica específica solo en el servidor o en el cliente según la necesidad.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+🏷️ **SEO Metatags y Title dinámico**  
+Gestión dinámica de etiquetas meta y títulos de página para mejorar la indexación en buscadores.
 
-## Running end-to-end tests
+🔗 **Enlaces con metadata y paginación híbrida**  
+Páginas independientes con peticiones HTTP previas a la generación de metadata y paginación basada en argumentos de ruta.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+📝 **Generación dinámica de archivo de rutas**  
+Script para construir automáticamente el archivo de rutas a prerenderizar.
 
-## Further help
+🚀 **Despliegues optimizados**  
+Consideraciones y configuración para desplegar aplicaciones SSR/SSG en netlify.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🔹 **Angular**  
+Framework principal para construir la interfaz y la lógica de la aplicación.
+
+💅 **Tailwind CSS**  
+ramework de estilos para construir interfaces modernas, limpias y responsivas.
+
+✅ **Testing**  
+Pruebas unitarias para garantizar la calidad y el comportamiento esperado del código.
+
+## 📝 SPA, SSR y SSG:
+
+- **SPA (Single Page Application):**  
+  Toda la aplicación se carga en el navegador y la navegación entre páginas ocurre sin recargar la web. Es rápida y fluida, pero tiene limitaciones de SEO porque el contenido no está disponible para los motores de búsqueda en la carga inicial.
+
+- **SSR (Server Side Rendering):**  
+  El servidor genera el HTML de cada página en cada petición, enviando contenido listo para ser indexado por buscadores y mejorando la carga inicial. Ideal para SEO y aplicaciones que requieren contenido dinámico.
+
+- **SSG (Static Site Generation):**  
+  Las páginas se generan de forma estática en el momento del build. El resultado es un sitio rápido y seguro, con excelente SEO, pero el contenido solo se actualiza cuando se vuelve a generar el sitio.
