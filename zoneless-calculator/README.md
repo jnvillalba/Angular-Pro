@@ -1,59 +1,22 @@
 # ZonelessCalculator
 
+ZonelessCalculator es una aplicación web de calculadora.
+Este proyecto es ideal para demostrar conocimientos tanto en versiones vieja como modernas de Angular, patrones de arquitectura, bueans practicas y tecnologías de las ultimas versiones de angular.
+
+## Tecnologías y conceptos aplicados
+
+- **Angular**: Framework principal para la construcción de la interfaz y la lógica de la aplicación.
+- **Zoneless Change Detection**: Utiliza el nuevo sistema de detección de cambios sin dependencias de zone.js, lo que mejora el rendimiento y la eficiencia.
+- **ChangeDetectionStrategy.OnPush**: Optimización de la actualización de vistas.
+- **ViewEncapsulation** y **ng-deep**: Para entender el alcance de los estilos en Angular.
+- **Content Projection**: Inserción dinámica de contenido en componentes.
+- **input Signals**: Gestión reactiva de datos de entrada.
+- **Host bindings**: Manipulación avanzada de atributos y clases en componentes
+- **Componentes Standalone**: Los componentes están diseñados para ser independientes y reutilizables, facilitando el mantenimiento y la escalabilidad.
+- **Arquitectura modular**: El código está organizado en módulos y servicios, siguiendo buenas prácticas de separación de responsabilidades.
+- **Testing**: Incluye pruebas unitarias para asegurar la calidad y el correcto funcionamiento de la lógica principal.
+- **Tailwind CSS**: Framework de estilos pra construir interfaces modernas y adaptables.
+
+---
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
-
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
